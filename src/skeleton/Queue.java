@@ -5,11 +5,16 @@ import java.util.NoSuchElementException;
 public abstract class Queue {
 	protected Node first;
 	protected Node last;
-	
+
+
 	public Queue() {
 		first = last = null;
 	}
-	
+
+	public boolean isEmpty() {
+		return last == null;
+	}
+
 	/**
 	 * Adds a person to the end of the list.
 	 * 
@@ -41,6 +46,10 @@ public abstract class Queue {
 		
 		public Node(Person person) {
 			this.person = person;
+		}
+
+		public void next(Node newNode) {
+
 		}
 	}
 }
